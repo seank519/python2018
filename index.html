@@ -56,6 +56,26 @@
       line-height: 1.5;
     }
 
+    .callout {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 16px 0 8px;
+      color: var(--subtle);
+      line-height: 1.5;
+    }
+
+    .callout code {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 600;
+      font-family: "SFMono-Regular", "JetBrains Mono", Consolas, monospace;
+    }
+
     form {
       display: grid;
       gap: 16px;
@@ -194,6 +214,12 @@
         예시 문항을 담은 간단한 CBT 웹앱입니다. 문제에 답한 뒤 맨 아래 "제출"을 누르면
         자동으로 채점하고, 전체 점수와 문항별 정답을 확인할 수 있습니다.
       </p>
+      <div class="callout">
+        <strong>실행 방법</strong><br />
+        1) 터미널에서 <code>python -m http.server 8000</code> 실행<br />
+        2) 브라우저로 <code>http://localhost:8000/index.html</code> 접속<br />
+        바로 열기만 해도 동작하지만, 서버로 띄우면 더 안정적으로 채점됩니다.
+      </div>
     </header>
 
     <form id="quiz-form">
